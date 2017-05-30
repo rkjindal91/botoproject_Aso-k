@@ -26,6 +26,6 @@ with open(filename, 'a') as csvfile:
                 print vol.id
                 attachmentData = vol.attach_data
                 if (attachmentData.instance_id == None):
-                    writer.writerow({'VolumeId': vol.id, 'Size': str(vol.size)+GB, 'Region': vol.zone, 'Creation Time': vol.create_time, 'Created From': vol.snapshot_id})
+                    writer.writerow({'VolumeId': vol.id, 'Size': str(vol.size)+'GB', 'Region': vol.zone, 'Creation Time': vol.create_time, 'Created From': vol.snapshot_id})
 
 csvfile.close()
