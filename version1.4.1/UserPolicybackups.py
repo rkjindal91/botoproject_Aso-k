@@ -1,9 +1,11 @@
 import boto3
+from itertools import chain
+import csv
 client = boto3.client(
 		'iam',)
 client_list = client.list_users()
 users = client_list['Users']
-policy names = []
+policy_names = []
 def get_auth(marker=None):
 	if marker is None:
 			get_auth = client.get_account_authorization_details(Filter=['User'])
